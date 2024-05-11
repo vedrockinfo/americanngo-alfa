@@ -1,0 +1,137 @@
+footer {
+  padding: 7rem 0;
+  background: #231f1f;
+
+  @include respond(maxWidth992) {
+    padding: 5rem 0;
+  }
+
+  @include respond(maxWidth768) {
+    padding: 3rem 0;
+  }
+
+  .footer-widget {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgba($colorWhite, 1);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    display: inline-block;
+  }
+
+  ul {
+    li {
+      color: rgba($colorWhite, 1);
+      font-weight: normal;
+
+      &:not(:last-child) {
+        padding-bottom: 1rem;
+      }
+
+      a {
+        color: rgba($colorWhite, 1);
+      }
+
+      i {
+        color: rgba($colorWhite, 1);
+        font-size: 2rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  p {
+    color: rgba($colorWhite, 1);
+    font-weight: normal;
+  }
+
+  .subscription-form {
+    display: flex;
+    margin-top: 2rem;
+
+    @include respond (maxWidth1200) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input {
+      font-size: 15px;
+      padding: 10px 24px;
+      line-height: 1;
+      height: 40px;
+
+      @include respond (maxWidth1200) {
+        border-radius: 20px;
+      }
+
+      @include respond (minWidth1200) {
+        width: calc(100% - 150px);
+      }
+
+      border-radius: 20px 0px 0px 20px;
+
+      &:hover {
+        box-shadow: none;
+        border: none;
+      }
+    }
+
+    button {
+      height: 40px;
+
+      @include respond (minWidth1200) {
+        width: 150px;
+      }
+
+      @include respond (maxWidth1200) {
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .useful-links {
+    li {
+      position: relative;
+
+      &::before {
+        content: "\f054";
+        position: absolute;
+        left: -15px;
+        top: 7px;
+        font-weight: 900;
+        font-family: "Font Awesome 6 Free";
+        font-size: 8px;
+      }
+    }
+  }
+}
+
+.copyright {
+  background: #000;
+  padding: 15px 0;
+  text-align: center;
+
+  p {
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
+.whatspapp-on-mobile{
+    @include respond (minWidth768){
+        display: none;
+    }
+    @include respond (maxWidth768){
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 9;
+        a{
+            img{
+                width: 5rem;
+                height: auto;
+            }
+        }
+    }
+}

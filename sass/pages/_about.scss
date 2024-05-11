@@ -1,0 +1,131 @@
+.edu-children{
+    h2{
+        @include respond (minWidth992){
+            text-align: left;
+        }
+    }
+    .donate-wrapper{
+        background: $colorSecondary;
+        padding: 2rem;
+        border-radius: 2rem;
+        position: sticky;
+        top: 15rem;
+        p{
+            color: $colorWhite;
+        }
+        .link-wrapper{
+            margin-top: 3rem;
+        }
+        hr{
+            border-color: $colorWhite;
+        }
+    }
+}
+
+.devi-history {
+  margin-top: 7rem;
+  background: rgba($colorPrimary, $alpha: 0.1);
+
+  @include respond (maxWidth768) {
+    margin-top: 4rem;
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  
+  &__items {
+    &:nth-child(1) {
+      flex: 0 0 calc(20% - 8rem);
+      max-width: calc(20% - 8rem);
+      text-align: center;
+    }
+
+    &:nth-child(2) {
+      flex: 0 0 calc(67.5% + 8rem);
+      max-width: calc(67.5% + 8rem);
+    }
+
+    .history-data {
+      border-left: 2px solid $colorPrimary;
+      padding-left: 8rem;
+      position: relative;
+      padding-bottom: 3rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -15.5px;
+        width: 20px;
+        height: 20px;
+        border-right: solid 15px transparent;
+        border-left: solid 15px transparent;
+        border-top: solid 15px $colorPrimary;
+      }
+    }
+
+    .history-wrap {
+      h4 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $colorPrimary;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.impact-full{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8IOXgUSs_zAetMtsOsufmBvD7Iz4XuTCAXRCfLvGhQ&s);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    &::after{
+        content: "";
+        background: rgba(#000, $alpha: 0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    .container{
+        position: relative;
+        z-index: 1;
+    }
+    .impact-card{
+        padding: 3rem 2rem;
+        border-top: 5px solid $colorSecondary;
+        background: $colorWhite;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+        transition: $transition;
+        &:hover{
+            transform: translateY(-5px);
+        }
+        @media screen and (min-width:1400px) {
+            min-height: 32.5rem;
+        }
+        h4{
+            font-size: 3.6rem;
+            color: rgba($colorPrimary, $alpha: 1);
+            font-weight: 700;
+            text-align: center;
+        }
+        i{
+            font-size: 7.2rem;
+            color: rgba($colorPrimary, $alpha: 1);
+            margin: 2rem 0;
+        }
+    }
+    .link-wrapper{
+        margin-top: 4rem;
+        text-align: center;
+    }
+}

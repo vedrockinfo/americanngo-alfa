@@ -98,21 +98,19 @@ h6 {
 
 .heading-tertiary {
   line-height: 1.25em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: 700;
+  text-transform: capitalize;
   color: $colorPrimary;
 }
 
 .heading-four {
   line-height: 1.25em;
   margin-bottom: 20px;
-  font-size: 14px;
-  border: 1px solid $colorPrimary;
-  padding: 2px 10px;
-  border-radius: 20px;
+  font-size: 18px;
   font-weight: 600;
-  color: $colorPrimary;
+  color: $colorWhite;
   text-transform: uppercase;
 }
 
