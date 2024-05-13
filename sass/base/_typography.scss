@@ -16,12 +16,12 @@ h6 {
   font-family: "Source Serif 4", serif;
 }
 
-.heading-hero-primary {
+.hero-primary-heading {
   text-transform: uppercase;
   font-size: 72px;
   font-weight: 700;
-  color: $colorPrimary;
-  text-align: center;
+  color: $colorWhite;
+  text-align: left;
   line-height: 1;
   @include respond(maxWidth992) {
     font-size: 48px;
@@ -39,25 +39,25 @@ h6 {
   }
 }
 
-.heading-hero-secondary {
+.hero-secondary-heading {
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 30px;
   font-weight: 700;
   color: $colorWhite;
-  text-align: center;
+  text-align: left;
   line-height: 1;
   display: block;
 
   @include respond(maxWidth992) {
-    font-size: 36px;
+    font-size: 24px;
   }
 
   @include respond(maxWidth768) {
-    font-size: 30px;
+    font-size: 22px;
   }
 
   @include respond(maxWidth575) {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 

@@ -80,7 +80,38 @@
     }
   }
 }
-
+.single-hero-section{
+  min-height: 30rem;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-content: center;
+  &::before{
+    content: "";
+    background: rgba($colorPrimary, $alpha: 0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .container{
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    h1{
+      font-size: 48px;
+              font-weight: 700;
+              color: rgba($colorWhite, $alpha: 1);
+              text-transform: uppercase;
+              text-align: left;
+              display: inline-flex;
+              align-items: center;
+              height: 100%;
+    }
+  }
+}
 .inner-hero-section {
   .inner-section-grid{
     display: grid;

@@ -1,0 +1,86 @@
+.latest-blog {
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+        .blog-grid-item {
+            &:first-child {
+                grid-column: span 2;
+            }
+
+            .blog-pics {
+                height: 400px;
+                background-size: cover !important;
+                margin-right: .5px;
+                position: relative;
+                &::before{
+                    content: "";
+                    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.306), transparent);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                .post-overlay {
+                    position: absolute;
+                    bottom: 15px;
+                    left: 15px;
+                    padding: 15px 15px 10px 15px;
+                    background-color: none;
+                    color: #E5DED4;
+                    font-size: 15px;
+                    width: 85%;
+
+                    .featured-post {
+                        background: $colorPrimary;
+                        padding: 5px 10px;
+                        font-size: 22px;
+                        width: 178px;
+                        display: block;
+                        margin-bottom: 10px;
+                        text-align: center;
+                        color: $colorWhite;
+                    }
+
+                    .heading-four {
+                        text-transform: none;
+                        font-size: 2.6rem;
+                        position: relative;
+                        &::before{
+                            content: "";
+                            background-color: #fff;
+                            position: absolute;
+                            left: 0;
+                            bottom: -1rem;
+                            width: 9rem;
+                            height: 4px;
+                        }
+
+                        a {
+                            color: $colorWhite;
+                        }
+                    }
+
+                    span.date{
+                        display: inline-block;
+                        background: $colorWhite;
+                        color: $colorPrimary;
+                        font-size: 14px;
+                        padding: 5px 10px;
+                        margin-bottom: 6px;
+                        margin-top: 1rem;
+                    }
+                    .article-classification{
+                        font-size: 14px;
+                        font-weight: 700;
+                        a{
+                            color: $colorWhite;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

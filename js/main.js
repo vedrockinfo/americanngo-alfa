@@ -48,7 +48,7 @@ $(document).ready(function () {
 
 // Header JS Ends
 jQuery(document).ready(function () {
-    jQuery('.contact-form .form-control').on('focus', function () {
+    jQuery('.signup-form .form-control').on('focus', function () {
         jQuery(this).parent().addClass('focused');
     }).on('blur', function () {
         jQuery(this).parent().removeClass('focused');
