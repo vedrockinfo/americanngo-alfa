@@ -17,7 +17,7 @@ header {
           position: absolute;
           right: 0;
           bottom: -2rem;
-          width: 75%;
+          width: 82%;
           height: 1px;
         }
       }
@@ -241,9 +241,12 @@ header {
 
         .nav-item {
           &:not(:last-child) {
-            padding-right: 2rem;
-            @include respond (minWidth1200){
+            padding-right: 1rem;
+            @media screen and (min-width:1400px){
               padding-right: 2rem;
+            }
+            @media screen and (min-width:992px) and (max-width:1199.9px){
+              padding-right: 0;
             }
 
             @media screen and (max-width:991.9px) {
@@ -256,8 +259,11 @@ header {
           a {
             font-weight: 500;
             color: $colorBlack;
-            font-size: 18px;
+            font-size: 16px;
             @include respond (minWidth1200){
+              font-size: 20px;
+            }
+             @media screen and (min-width:1400px){
               font-size: 22px;
             }
           }

@@ -106,3 +106,47 @@ $(".owl-partners").owlCarousel({
         },
     },
 });
+
+$('.managementslides').owlCarousel({
+    loop: true,
+    margin: 40,
+    nav: true,
+    dots: false,
+    navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
+    autoplay: true,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+        0: {
+            items: 1
+        },
+        768: {
+            items: 3
+        },
+        992: {
+            items: 4
+        }
+    }
+})
+
+$('.internationalpartners').owlCarousel({
+    loop: true,
+    margin: 40,
+    nav: true,
+    dots: false,
+    navText: ['<i class="fa-solid fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
+    autoplay: true,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+        0: {
+            items: 1
+        },
+        768: {
+            items: 3
+        },
+        992: {
+            items: 5
+        }
+    }
+})
