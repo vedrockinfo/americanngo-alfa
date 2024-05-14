@@ -1237,6 +1237,17 @@ header .mobile-header .navbar {
         .latest-blog .blog-grid .blog-grid-item .blog-pics .post-overlay .article-classification a {
           color: #ffffff; }
 
+.donation-form .btn-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem; }
+
+.donation-form label {
+  height: 7rem;
+  display: grid;
+  place-content: center;
+  font-size: 2.4rem; }
+
 .globaladvisory-committee {
   display: block; }
   .globaladvisory-committee .row {

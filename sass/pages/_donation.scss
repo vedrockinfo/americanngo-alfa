@@ -1,0 +1,13 @@
+.donation-form{
+    .btn-group{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+    label{
+        height: 7rem;
+    display: grid;
+    place-content: center;
+    font-size: 2.4rem;
+    }
+}
