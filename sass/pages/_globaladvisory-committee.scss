@@ -1,0 +1,93 @@
+.globaladvisory-committee{
+    display: block;
+    .row{
+        row-gap: 2rem;
+    }
+    .globaladvisory-person{
+        display: block;
+        box-shadow: $boxShadowOne;
+        border-radius: 2.9rem;
+        &:hover{
+            .globaladvisory-social{
+                a{
+                    opacity: 1;
+                    visibility: visible;
+                    transform: scale(1);
+                }
+            }
+        }
+        .globaladvisory-image{
+            background-image: $gradientOne;
+            text-align: center;
+            border-radius: 2.9rem 2.9rem 0 0;
+            position: relative;
+            img{
+                width: 16.5rem;
+                height: 16.5rem;
+                border-radius: 100%;
+                border: 4px solid $colorSecondary;
+                outline: 4px solid $colorWhite;
+                position: relative;
+                object-fit: cover;
+                object-position: center;
+    top: 3rem;
+            }
+            .globaladvisory-social{
+                position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    a{
+        color: $colorWhite;
+        font-size: 3rem;
+        transform: scale(0);
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition;
+    }
+            }
+        }
+        .globaladvisory-person-info{
+            padding: 4.8rem 2rem 3rem;
+            .globaladvisory-info-container{
+                position: relative;
+                @media screen and (min-width:1400px) {
+                    height: 36rem;
+                }
+                @media screen and (min-width:1200px) and (max-width:1399.9px) {
+                    height: 39rem;
+                }
+                @media screen and (min-width:992px) and (max-width:1199.9px) {
+                    height: 55rem;
+                }
+                @media screen and (max-width:992px) and (min-width:768px) {
+                    height: 38rem;
+                }
+                @media screen and (max-width:768px) {
+                    height: auto;
+                }
+                .heading-six{
+                    font-size: 26px;
+                    margin-bottom: 1rem;
+                }
+                h5{
+                    text-align: center;
+                    padding: 4px;
+                    border-top: 1px solid $colorSecondary;
+                    border-bottom: 1px solid $colorSecondary;
+                    color: $colorSecondary;
+                }
+                .view-profile{
+                    text-align: center;
+                    @media screen and (min-width:768px) {
+                        position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
