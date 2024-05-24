@@ -118,6 +118,15 @@
     grid-template-columns: repeat(2, 1fr);
     position: relative;
   min-height: 30rem;
+  @include respond (maxWidth768){
+    grid-template-columns: repeat(1, 1fr);
+    min-height: 15rem;
+    .inner-section-grid-item{
+      &:last-child{
+        display: none;
+      }
+    }
+  }
     .inner-section-grid-item{
       height: 100%;
       &:first-child{
@@ -144,6 +153,12 @@
               display: inline-flex;
               align-items: center;
               height: 100%;
+              @include respond (maxWidth768){
+                text-align: center;
+                font-size: 24px;
+                justify-content: center;
+                display: flex;
+              }
              }
         }
       }
@@ -227,15 +242,15 @@
       }
       &::before{
         content: "";
-    background: $colorPrimary;
+    background-image: url(../images/list-icon.png);
     position: absolute;
-    width: 13px;
-    height: 13px;
-    top: 5px;
-    left: -25px;
-    border-radius: 50%;
-    outline: 1px solid $colorPrimary;
-    border: 2px solid #ffffff;
+    width: 30px;
+    height: 31px;
+    top: 0;
+    left: -3rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(0.5);
       }
     }
   }

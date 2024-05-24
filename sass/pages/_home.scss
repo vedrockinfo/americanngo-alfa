@@ -154,7 +154,7 @@
         margin-top: 3rem;
       }
           .content-para {
-            margin-top: 3rem;
+            margin-top: 2rem;
 
             p {
               @include respond (minWidth992) {
@@ -177,6 +177,9 @@
 
 .outreach {
   article {
+    .heading-four{
+      color: $colorBlack;
+    }
     &:not(:last-child) {
       margin-bottom: 2rem;
       padding-bottom: 2rem;
@@ -184,32 +187,96 @@
     }
   }
 
-  .video-wrapper {
-    height: 35rem;
-    width: calc(100% - 10rem);
-    margin: auto;
+  .image-wrapper {
+    @include respond (maxWidth768){
+      margin-bottom: 2rem;
+    }
+    height: 100%;
+    @include respond (minWidth768){
+      width: calc(100% - 4rem);
+    }
 
-    video {
+    img {
       height: 100%;
       width: 100%;
 
-      &[poster] {
-        object-fit: cover;
+    }
+  }
+  .col-md-12 .content-para{
+    &.why{
+      @include respond (minWidth768){
+        margin-left: 5rem;
       }
+    }
+    strong{
+      text-align: left;
+      font-size: 2rem;
+    }
+  }
+}
+
+.background{
+  a.global-btn-two{
+    
+    @include respond (maxWidth768){
+      margin-bottom: 2rem;
+    }
+  }
+  .img-wrapper{
+    position: relative;
+    background: transparent;
+    width: 100%;
+    margin: 38px auto;
+    &::before{
+      content: "";
+    background-image: url(../images/sharp-bg.png);
+    position: absolute;
+    top: -38px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    transform: scale(0.9);
+    mix-blend-mode: multiply;
+    }
+    &::after{
+      content: "";
+    background-image: url(../images/sharp-bg.png);
+    position: absolute;
+    right: 0;
+    bottom: -38px;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    transform: scale(0.9);
+    mix-blend-mode: multiply;
+    }
+    img{
+      width: calc(100% - 100px);
+    margin: auto;
+    display: block;
     }
   }
 }
 
 .literacy-crisis {
-  background-image: url(../../images/cb103394dd53fd469acc30d922015a68b30830ba.webp);
+  background-image: url(../images/cb103394dd53fd469acc30d922015a68b30830ba.jpg);
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat;
-  padding: 10rem 0;
+  padding: 9.5rem 0;
 
   .content-wrapper {
+    .heading-primary{
+      @include respond (minWidth1200){
+        font-size: 36px;
+      }
+    }
     h3 {
       color: $colorWhite;
+      margin-bottom: 2rem;
+    }
+    .content-para{
       margin-bottom: 4rem;
     }
 
@@ -222,6 +289,180 @@
   }
 }
 
+.program-structure{
+  .program-grid{
+    display: grid;
+    @include respond (maxWidth768){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond (maxWidth575){
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include respond (minWidth768){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond (minWidth1200){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    gap: 2rem;
+    &__item{
+      background: rgba($colorPrimary, $alpha: 0.1);
+      border-radius: 5px;
+      height: 15rem;
+      padding: 3rem;
+      
+    @include respond (maxWidth768){
+      height: auto;
+    }
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+      transition: $transition;
+      &:hover{
+        transform: scale(1.02);
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+      }
+      .content-para{
+        strong{
+          font-size: 3.6rem;
+        }
+        p{
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+}
+
+
+.pilot-approach{
+  .heading-four{
+    @include respond (minWidth1200){
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  .img-wrapper{
+    
+    @include respond (maxWidth768){
+      margin-top: 2rem;
+    }
+  }
+}
+
+.testimonials {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background: #f2f2f2;
+
+  @include respond(maxWidth992) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  @include respond(maxWidth768) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .testimonial {
+    .single-testimonial {
+      .test-pics {
+        width: 13rem;
+        height: 13rem;
+        margin: 0 auto -6rem;
+        border-radius: 50%;
+        border: 10px solid #f2f2f2;
+        z-index: 3;
+        position: relative;
+
+        img {
+          border-radius: 50%;
+          border: 3px solid $colorBlack;
+          aspect-ratio: 1;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+
+      .test-content {
+        background: #fff;
+        padding: 8rem 2rem 5rem;
+        box-shadow: $boxShadowOne;
+        margin-bottom: 1rem;
+
+        @media screen and (min-width:1400px) {
+          height: 615px;
+          padding: 5rem 4rem 5rem;
+        }
+
+        @media screen and (min-width:1200px) and (max-width:1399.9px) {
+          height: 640px;
+        }
+
+        @media screen and (min-width:992px) and (max-width:1199.9px) {
+          height: 710px;
+        }
+
+        @media screen and (min-width:768px) and (max-width:991.9px) {
+          height: 590px;
+        }
+
+        h5 {
+          font-size: 2.4rem;
+          color: $colorPrimary;
+          font-weight: 700;
+          text-align: center;
+          padding-bottom: 1rem;
+        }
+
+        h6 {
+          font-size: 1.6rem;
+          text-align: center;
+          font-weight: 300;
+          color: $colorBlack;
+          padding: 1rem 0;
+          border-top: 1px solid rgba($colorBlack, 0.4);
+          border-bottom: 1px solid rgba($colorBlack, 0.4);
+        }
+
+        i {
+          text-align: center;
+          font-size: 8rem;
+          display: block;
+          color: rgba($colorPrimary, 0.4);
+        }
+      }
+    }
+    .implementation{
+      text-align: center;
+      margin-top: 3rem;
+      h4{
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+      p{
+        text-transform: capitalize;
+        @include respond (minWidth992){
+          font-size: 2rem;
+          margin-top: 0.3rem;
+        }
+      }
+    }
+    .endorsement{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba($colorPrimary, $alpha: 1); 
+      h4{
+        color: $colorWhite;
+        text-align: center;
+        margin-bottom: 0;
+        padding: 1rem;
+        text-transform: capitalize;
+      }
+      }
+  }
+}
 .latest-news {
   margin-top: 4rem;
 
@@ -319,6 +560,49 @@
   }
 }
 
+.harvard-endorse{
+  .row.mr-top{
+    .row{
+      @include respond (maxWidth768){
+        gap: 2rem;
+      }
+    }
+    .content-para{
+      border: 1px solid rgba($colorPrimary, $alpha: 1);
+      padding: 3rem;
+      border-radius: 2rem;
+      text-align: center;
+      background: rgba($colorPrimary, $alpha: 1);
+      color: $colorWhite;
+      transition: $transition;
+      &:hover{
+        background: rgba($colorPrimary, $alpha: 0);
+        color: rgba($colorBlack, 1);
+        transform: translateY(-5px);
+      }
+    }
+  }
+  .img-fluid{
+    @media screen and (min-width:1400px) {
+      width: calc(100% - 10rem);
+    margin: auto;
+    display: block;
+    }
+  }
+  .content-para.first{
+    
+      @include respond (minWidth992){
+        p{
+        font-size: 3rem;
+      line-height: 1.5;
+      }
+      small{
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
 .latest-books {
   .single-portfolio {
     position: relative;
@@ -394,16 +678,56 @@
 
 .call-to-action {
   background: $colorSecondary;
-  padding: 7rem 0;
+  
+  .container{
+    position: relative;
+  }
+  .rebuilding-wrapper{
+    @media screen and (max-width:992px) {
+        width: 30rem;
+        padding-top: 5rem;
+        margin: auto;
+    }
+    @media screen and (min-width:992px) {
+      left: 0;
+        width: 30rem;
+        position: absolute;
+    bottom: 0;
+    }
+    @media screen and (min-width:1200px) {
+      left: 0;
+        width: 37rem;
+    }
+    @media screen and (min-width:1400px) {
+      left: 30px;
+    width: 36rem;
+    }
+    
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .content-wrapper{
+    padding: 7rem 0;
+    @include respond (minWidth575){
+      p{
+        text-align: right;
+      }
+      @include respond (maxWidth575){
+        p{
+          text-align: center;
+        }
+      }
+    }
 
   @include respond(maxWidth992) {
-    margin: 5rem 0;
+    margin: 0 0;
+    padding-top: 0;
   }
 
-  @include respond(maxWidth768) {
-    margin: 3rem 0;
   }
-
   .heading-secondary {
     color: $colorWhite;
 
@@ -431,5 +755,36 @@
 
   .owl-carousel .owl-dot.active {
     background: $colorPrimary;
+  }
+}
+
+.iprogress{
+  .iprogress-grid{
+    display: grid;
+    @include respond (maxWidth768){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond (maxWidth575){
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include respond (minWidth768){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond (minWidth1200){
+      grid-template-columns: repeat(6, 1fr);
+    }
+    gap: 1.5rem;
+    margin-top: 3rem;
+    &__item{
+      background: rgba($colorPrimary, $alpha: 1);
+      padding: 2rem 1rem 0 1rem;
+      transition: $transition;
+      &:hover{
+        background: lighten($colorPrimary, $amount: 10);
+      }
+      h4{
+        text-align: center;
+      }
+    }
   }
 }

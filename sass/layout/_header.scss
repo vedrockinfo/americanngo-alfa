@@ -20,6 +20,23 @@ header {
           width: 82%;
           height: 1px;
         }
+        @include respond (minWidth992){
+          ul.dropdown-menu {
+    li{
+      display: block !important;
+      &:not(:last-child){
+        padding: 3px 0;
+    margin: 3px 5px;
+    border-bottom: 1px solid rgba(0, 78, 163, 0.2);
+      }
+    }
+    a{
+      font-weight: 500;
+    color: #373435;
+    font-size: 16px;
+    }
+}
+        }
       }
 
       .social-media {
@@ -241,12 +258,12 @@ header {
 
         .nav-item {
           &:not(:last-child) {
-            padding-right: 1rem;
+            padding-right: 2rem;
             @media screen and (min-width:1400px){
-              padding-right: 2rem;
+              padding-right: 2.5rem;
             }
             @media screen and (min-width:992px) and (max-width:1199.9px){
-              padding-right: 0;
+              padding-right: 1rem;
             }
 
             @media screen and (max-width:991.9px) {

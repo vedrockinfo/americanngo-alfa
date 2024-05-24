@@ -150,3 +150,47 @@ $('.internationalpartners').owlCarousel({
         }
     }
 })
+
+$('.inspiration-quotes').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: true,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+    autoplay: true,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 2
+        }
+    }
+})
+
+$('.peru-slides').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: true,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+    autoplay: true,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 1
+        }
+    }
+})
