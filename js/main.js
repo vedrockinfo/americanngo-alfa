@@ -28,12 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (window.scrollY > 200) {
             document.getElementById('navbar_top').classList.add('fixed-top');
-            // add padding top to show content behind navbar
+
             navbar_height = document.querySelector('.navbar').offsetHeight;
             document.body.style.paddingTop = navbar_height + 'px';
         } else {
             document.getElementById('navbar_top').classList.remove('fixed-top');
-            // remove padding top from body
+
             document.body.style.paddingTop = '0';
         }
     });
@@ -194,3 +194,77 @@ $('.peru-slides').owlCarousel({
         }
     }
 })
+
+jQuery('.intested-carousel').owlCarousel({
+    loop: true,
+    margin: 20,
+    autoplay: false,
+    dots: false,
+    nav: true,
+    responsiveClass: true,
+    autoHeight: true,
+    autoplayTimeout: 3000,
+    smartSpeed: 800,
+    animateOut: 'fadeOut',
+    navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 3
+        }
+    }
+})
+
+jQuery(document).ready(function () {
+    jQuery('.call-wrapper .form-control').on('focus', function () {
+        jQuery(this).parent().addClass('focused');
+    }).on('blur', function () {
+        jQuery(this).parent().removeClass('focused');
+    }).on('input', function () {
+        jQuery(this).parent().addClass('inputted');
+    });
+
+});
+
+
+// By focusing on input type text, input type radio get unselected 
+
+jQuery(document).ready(function () {
+    var lastSelectedRadio;
+    jQuery("input[type='radio']").change(function () {
+        lastSelectedRadio = this;
+    });
+    jQuery("#textInput").focus(function () {
+        if (lastSelectedRadio) {
+            jQuery(lastSelectedRadio).prop("checked", false);
+        }
+    });
+    jQuery("#other-amt, #month-other-amt").focus(function () {
+        if (lastSelectedRadio) {
+            jQuery(lastSelectedRadio).prop("checked", false);
+        }
+    });
+});
+
+
+$(function () {
+
+    $('.thumbnail').viewbox();
+    $('.thumbnail-2').viewbox({ fullscreenButton: true });
+
+    (function () {
+        var vb = $('.popup-link').viewbox();
+        $('.popup-open-button').click(function () {
+            vb.trigger('viewbox.open');
+        });
+        $('.close-button').click(function () {
+            vb.trigger('viewbox.close');
+        });
+    })();
+
+});

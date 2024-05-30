@@ -24,9 +24,9 @@ header {
           ul.dropdown-menu {
     li{
       display: block !important;
+      padding: 5px 0;
+      margin: 3px 5px;
       &:not(:last-child){
-        padding: 3px 0;
-    margin: 3px 5px;
     border-bottom: 1px solid rgba(0, 78, 163, 0.2);
       }
     }
@@ -131,10 +131,10 @@ header {
           li {
             display: inline-block;
             line-height: 1;
+            padding-right: 8px;
+              margin-right: 8px;
 
             &:not(:last-child) {
-              padding-right: 8px;
-              margin-right: 8px;
               border-right: 1px solid rgba($colorBlack, $alpha: 0.5);
             }
 
@@ -190,7 +190,7 @@ header {
 
       @include respond (maxWidth992) {
         position: fixed;
-        z-index: 1050;
+        z-index: 699;
 
         .navbar-collapse {
           position: fixed;
@@ -325,10 +325,12 @@ header {
           box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
           border-radius: 0 0 15px 15px;
 
-          li:not(:last-child) {
+          li{
             padding: 3px 0;
             margin: 3px 5px;
+            &:not(:last-child) {
             border-bottom: 1px solid rgba($colorPrimary, $alpha: 0.2);
+          }
           }
 
           li a {
@@ -352,6 +354,11 @@ header {
               }
             }
           }
+          @include respond (minWidth1200){
+            .dropdown-menu{
+              min-width: 207px!important;
+            }
+          }
 
         @include respond (minWidth992) {
           .dropdown-menu {
@@ -359,6 +366,7 @@ header {
             opacity: 0;
             visibility: hidden;
             transform: translateY(-10%);
+            min-width: 169px;
             transition: $transition;
           }
 
