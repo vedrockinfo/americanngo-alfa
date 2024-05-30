@@ -1140,7 +1140,7 @@ header .mobile-header .navbar {
         object-fit: cover; }
 
 .hero-section-one {
-  height: 586px;
+  height: 100vh;
   overflow: hidden;
   position: relative;
   background: #001843;
