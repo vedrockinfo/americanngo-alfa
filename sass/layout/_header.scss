@@ -40,7 +40,6 @@ header {
       }
 
       .social-media {
-        color: $colorBlack;
         display: inline-flex;
         padding-left: 3rem;
 
@@ -88,6 +87,7 @@ header {
                 display: block;
                 text-align: center;
                 padding: 10px 0;
+                
               }
             }
           }
@@ -110,6 +110,10 @@ header {
 
             a {
               color: $colorBlack;
+              transition: $transition;
+                &:hover{
+                  color: $colorTertiary;
+                }
 
               i {
                 font-size: 20px;
@@ -286,12 +290,7 @@ header {
           }
 
           .global-btn-two {
-            color: rgba($colorWhite, $alpha: 1);
             text-transform: uppercase;
-
-            &:hover {
-              color: $colorSecondary;
-            }
           }
         }
       }

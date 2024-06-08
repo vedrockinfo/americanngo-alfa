@@ -142,6 +142,10 @@ h6 {
     margin-bottom: 0;
   }
 
+  @media screen and (min-width:992px) and (max-width:1400px) {
+    font-size: 16px;
+  line-height: 28px;
+  }
   @include respond(maxWidth992) {
     font-size: 16px;
     line-height: 1.7;

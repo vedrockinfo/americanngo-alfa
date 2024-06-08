@@ -220,6 +220,53 @@ jQuery('.intested-carousel').owlCarousel({
     }
 })
 
+jQuery('.vector-shapes').owlCarousel({
+    loop: true,
+    margin: 20,
+    autoplay: true,
+    dots: false,
+    mouseDrag:false,
+    nav: false,
+    responsiveClass: true,
+    autoHeight: true,
+    autoplayTimeout: 3000,
+    smartSpeed: 800,
+    animateOut: 'fadeOut',
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 1
+        }
+    }
+})
+
+$('.testimonial-quotes').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: true,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+    autoplay: true,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 3
+        }
+    }
+})
+
 jQuery(document).ready(function () {
     jQuery('.call-wrapper .form-control').on('focus', function () {
         jQuery(this).parent().addClass('focused');
