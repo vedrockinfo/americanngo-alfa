@@ -232,28 +232,29 @@
   text-decoration: none;
   display: inline-block;
 }
-.primary-listing{
-    margin: 0;
-    li{
-      position: relative;
-      list-style: none;
-      &:not(:last-child){
-        margin-bottom: 7.4px;
-      }
-      &::before{
-        content: "";
-    background-image: url(../images/list-icon.png);
-    position: absolute;
-    width: 30px;
-    height: 31px;
-    top: 0;
-    left: -3rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: scale(0.5);
-      }
-    }
-  }
+// .primary-listing{
+//     margin: 0;
+//     padding: 15px 10px 0 30px;
+//     li{
+//       position: relative;
+//       list-style: none;
+//       &:not(:last-child){
+//         margin-bottom: 7.4px;
+//       }
+//       &::before{
+//         content: "";
+//     background-image: url(../images/list-icon.png);
+//     position: absolute;
+//     width: 30px;
+//     height: 31px;
+//     top: 0;
+//     left: -3rem;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     transform: scale(0.5);
+//       }
+//     }
+//   }
   .call-to-action{
     background: linear-gradient(90deg, $colorPrimary 0%, $colorSecondary 100%);
     padding: 5rem 0;

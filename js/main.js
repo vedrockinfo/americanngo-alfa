@@ -267,6 +267,28 @@ $('.testimonial-quotes').owlCarousel({
     }
 })
 
+$('.inside-alfa-slider').owlCarousel({
+    loop: false,
+    margin: 20,
+    nav: true,
+    dots: false,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+    autoplay: true,
+    autoplayTimeout: 7000,
+    smartSpeed: 800,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
 jQuery(document).ready(function () {
     jQuery('.call-wrapper .form-control').on('focus', function () {
         jQuery(this).parent().addClass('focused');
@@ -313,5 +335,23 @@ $(function () {
             vb.trigger('viewbox.close');
         });
     })();
+
+});
+
+$('.numracy-slider').owlCarousel({
+    autoplay: true,
+    center: true,
+    loop: true,
+    nav: false,
+  });
+
+/****************************/
+
+jQuery(document.documentElement).keydown(function (event) {    
+    if (event.keyCode == 37) {
+      owl.trigger('prev.owl.carousel', [400]);
+    } else if (event.keyCode == 39) {
+        owl.trigger('next.owl.carousel', [400]);
+    }
 
 });
