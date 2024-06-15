@@ -1929,6 +1929,47 @@ header .mobile-header .navbar {
       padding: 6px 19px;
       border-radius: 15px; }
 
+.known-unknown img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center; }
+  @media only screen and (min-width: 768.1px) {
+    .known-unknown img {
+      min-height: 221.38px; } }
+  @media only screen and (min-width: 992.1px) {
+    .known-unknown img {
+      min-height: 298.38px; } }
+  @media only screen and (min-width: 1200.1px) {
+    .known-unknown img {
+      min-height: 356.13px; } }
+  @media screen and (min-width: 1400px) {
+    .known-unknown img {
+      min-height: 413.89px; } }
+
+.known-unknown figcaption {
+  text-align: center;
+  font-weight: 700;
+  color: #1b065e; }
+
+.philosophy-area .philosophy-card {
+  text-align: center;
+  border-radius: var(--bord);
+  background-image: var(--p-gr);
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center; }
+  .philosophy-area .philosophy-card .philosophy-icon {
+    padding-bottom: 3rem; }
+    .philosophy-area .philosophy-card .philosophy-icon img {
+      height: 12.5rem;
+      filter: brightness(0) invert(1); }
+  .philosophy-area .philosophy-card .philosophy-content h4 {
+    color: #ffffff;
+    margin-bottom: 0;
+    padding: 4px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff; }
+
 .latest-blog .blog-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2479,13 +2520,32 @@ header .mobile-header .navbar {
 
 .journey-support {
   background-image: linear-gradient(90deg, #086945, #48bf53);
-  padding: 7rem 0; }
+  padding: 7rem 0;
+  position: relative; }
+  .journey-support::before {
+    content: "";
+    background-image: url("https://iprogress.app/iversusilogincss/images/Collage1.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: left;
+    background-size: cover;
+    opacity: 0.13;
+    mix-blend-mode: overlay; }
+  .journey-support .container {
+    position: relative; }
   @media only screen and (max-width: 992px) {
     .journey-support {
       padding: 5rem 0; } }
   @media only screen and (max-width: 768px) {
     .journey-support {
       padding: 3rem 0; } }
+  .journey-support img {
+    position: sticky;
+    top: 1rem; }
   .journey-support .content-para li {
     color: #ffffff; }
     .journey-support .content-para li::before {

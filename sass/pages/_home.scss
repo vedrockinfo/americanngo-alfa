@@ -1221,3 +1221,53 @@ position: relative;
     }
   }
 }
+.known-unknown{
+  img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    @include respond (minWidth768){
+      min-height: 221.38px;
+    }
+    @include respond (minWidth992){
+      min-height: 298.38px;
+    }
+    @include respond (minWidth1200){
+      min-height: 356.13px;
+    }
+    @media screen and (min-width:1400px) {
+      min-height: 413.89px;
+    }
+  }
+  figcaption{
+    text-align: center;
+    font-weight: 700;
+    color: rgba($colorTertiary, $alpha: 1);
+  }
+}
+.philosophy-area{
+  .philosophy-card{
+    text-align: center;
+    border-radius: var(--bord);
+    background-image: var(--p-gr);
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    .philosophy-icon{
+      padding-bottom: 3rem;
+      img{
+        height: 12.5rem;
+        filter: brightness(0) invert(1);
+      }
+    }
+    .philosophy-content{
+      h4{
+        color: $colorWhite;
+        margin-bottom: 0;
+        padding: 4px;
+        border-top: 1px solid $colorWhite;
+        border-bottom: 1px solid $colorWhite;
+      }
+    }
+  }
+}
