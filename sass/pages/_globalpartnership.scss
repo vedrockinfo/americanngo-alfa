@@ -106,7 +106,7 @@
             h1{
                 font-size: 9rem;
     font-weight: 800;
-    color: #ec4e1c;
+    color: $colorTertiary;
             }
             h4{
                 padding: 5px;
@@ -142,3 +142,152 @@
         }
     }
   }
+  .trinada{
+    @media screen and (min-width:140rem) {
+      height: 40rem;
+    }
+    @include respond (minWidth768){
+      .row{
+        &:last-child{
+          flex-direction: row-reverse;
+        }
+      }
+    }
+    @include respond (minWidth768){
+      h2{
+        text-align: left;
+      }
+      .img-wrapper{
+        overflow: hidden;
+        &:hover{
+          img{
+            transform: scale(1.2);
+          }
+        }
+        img{
+          height: 46rem;
+        width: 100%;
+        transition: $transition;
+        object-fit: cover;
+        object-position: center;
+        }
+      }
+      p{
+          font-size: 3.6rem;
+        line-height: 1.27;
+        font-weight: 300;
+      }
+    }
+    .heading-secondary{
+      color: $colorTertiary!important;
+      display: inline-block;
+      padding: 7px;
+      border-top: 1px solid $colorTertiary;
+      border-bottom: 1px solid $colorTertiary;
+    }
+  }
+  .why-pilot{
+    .row{
+      row-gap: 2rem;
+    }
+    .card{
+      box-shadow: $boxShadowOne;
+      .icon{
+        padding: 3rem 0;
+        text-align: center;
+        img{
+          height: 10rem;
+          margin: auto;
+        }
+      }
+      .heading-secondary{
+        color: $colorWhite;
+        background: $colorPrimary;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 1rem 2rem;
+      }
+      .content-para{
+        padding: 2rem;
+        @include respond (minWidth768){
+          min-height: 121.59px;
+        }
+        @include respond (minWidth992){
+          min-height: 18rem;
+        }
+        @include respond (minWidth1200){
+          min-height: 152px;
+        }
+      }
+    }
+  }
+  .baseline-assesment{
+    @include respond (maxWidth992){
+      .col-lg-1{
+        display: none;
+      }
+    }
+    h2{
+      @include respond (minWidth768){
+        text-align: left;
+      }
+    }
+    @include respond (minWidth768){
+      .revers{
+        flex-direction: row-reverse;
+        .content-para{
+          padding-left: 2rem;
+        }
+      }
+    }
+    .heading-secondary{
+      color: $colorTertiary;
+      display: inline-block;
+      padding: 7px;
+      border-top: 1px solid;
+      border-bottom: 1px solid $colorTertiary;
+    }
+  }
+  .nepal-gallery{
+    .nepal-gallery-grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:5px;
+      &__item{
+        
+      }
+      img{
+        height: 18rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all 0.5s;
+      }
+    }
+    .nepal-gallery-content{
+      background-image: $gradientOne;
+      padding: 1.5rem;
+    }
+  }
+ .journey-support{
+  background-image: $gradientOne;
+  padding: 7rem 0;
+
+  @include respond(maxWidth992) {
+    padding: 5rem 0;
+  }
+
+  @include respond(maxWidth768) {
+    padding: 3rem 0;
+  }
+  .content-para {
+    li{
+      color: $colorWhite;
+      &::before{
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+ }

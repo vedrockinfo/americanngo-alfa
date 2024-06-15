@@ -1,6 +1,6 @@
-$colorPrimary: #004ea3;
-$colorSecondary: #0384c8;
-$colorTertiary:#f6511d;
+$colorPrimary: #086945;
+$colorSecondary: #48bf53;
+$colorTertiary:#1b065e;
 $colorBlack:#373435;
 $colorWhite: #ffffff;
 $copyrightBG:#001b24;
@@ -8,5 +8,5 @@ $footerBG:#00222d;
 
 
 $transition: 0.4s ease;
-$gradientOne:linear-gradient(#004ea3, #0384c8);
+$gradientOne:linear-gradient(90deg, $colorPrimary, $colorSecondary);
 $boxShadowOne:rgba(149, 157, 165, 0.2) 0px 8px 24px;

@@ -232,9 +232,9 @@ header {
       .navbar-brand {
         img {
           @include respond (minWidth992){
-            width: 16rem;
+            width: 19rem;
     position: absolute;
-    top: -30px;
+    top: -10px;
           }
         }
       }
